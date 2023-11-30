@@ -19,65 +19,33 @@ public class CalculatorTests
     [TestCase(3, 4, 5)]
     [TestCase(4, 4, 5.656854249492)]
     [TestCase(3.456, 4.567, 5.727252831855)]
-    public void IfTriangleIsRight_ShouldReturnIsRightTrue(double side1, double side2, double side3)
+    public void IfTriangleIsRight_ShouldReturnAngleRight(double side1, double side2, double side3)
     {
         var triangle = new Triangle(side1, side2, side3);
         var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
         Assert.IsTrue(result);
-        Assert.IsTrue(calculations.IsRight);
-    }
-
-    [TestCase(3, 4, 6)]
-    [TestCase(4, 4, 5.6562)]
-    public void IfTriangleIsNotRight_ShouldReturnIsRightFalse(double side1, double side2, double side3)
-    {
-        var triangle = new Triangle(side1, side2, side3);
-        var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
-        Assert.IsTrue(result);
-        Assert.IsFalse(calculations.IsRight);
-    }
-
-    [TestCase(3, 4, 4)]
-    [TestCase(10, 10, 4)]
-    [TestCase(4.456, 4.456, 6.727252831855)]
-    public void IfTriangleIsIsosceles_ShouldReturnIsIsoscelesTrue(double side1, double side2, double side3)
-    {
-        var triangle = new Triangle(side1, side2, side3);
-        var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
-        Assert.IsTrue(result);
-        Assert.IsTrue(calculations.IsIsosceles);
-    }
-
-    [TestCase(5, 4, 8)]
-    [TestCase(10, 7, 4)]
-    [TestCase(4.456, 4.457, 6.727252831855)]
-    public void IfTriangleIsNotIsosceles_ShouldReturnIsIsoscelesFalse(double side1, double side2, double side3)
-    {
-        var triangle = new Triangle(side1, side2, side3);
-        var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
-        Assert.IsTrue(result);
-        Assert.IsFalse(calculations.IsIsosceles);
+        Assert.AreEqual(AngleType.Right, calculations.Angle);
     }
 
     [TestCase(3, 4, 4.5)]
     [TestCase(6, 6, 6)]
     [TestCase(4.456, 4.456, 5.727252831855)]
-    public void IfTriangleIsAcute_ShouldReturnIsAcuteTrue(double side1, double side2, double side3)
+    public void IfTriangleIsAcute_ShouldReturnAngelAcute(double side1, double side2, double side3)
     {
         var triangle = new Triangle(side1, side2, side3);
         var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
         Assert.IsTrue(result);
-        Assert.IsTrue(calculations.IsAcute);
+        Assert.AreEqual(AngleType.Acute, calculations.Angle);
     }
 
-    [TestCase(5, 5, 9.5)]
-    [TestCase(100000, 100000, 150000)]
+    [TestCase(2, 2, 3)]
+    [TestCase(1, 5, 5.5)]
     [TestCase(4.456, 4.456, 7.727252831855)]
-    public void IfTriangleIsNotAcute_ShouldReturnIsAcuteFalse(double side1, double side2, double side3)
+    public void IfTriangleIsObtuse_ShouldReturnAngelObtuse(double side1, double side2, double side3)
     {
         var triangle = new Triangle(side1, side2, side3);
         var result = TriangleCalculator.TriangleCalculator.TryCalculate(triangle, out var calculations);
         Assert.IsTrue(result);
-        Assert.IsFalse(calculations.IsAcute);
+        Assert.AreEqual(AngleType.Obtuse, calculations.Angle);
     }
 }

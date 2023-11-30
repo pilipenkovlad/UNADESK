@@ -6,7 +6,5 @@
 /// </summary>
 public class TrianglesCalculations
 {
-    public bool? IsRight { get; set; }
-    public bool? IsAcute { get; set; }
-    public bool? IsIsosceles { get; set; }
+    public AngleType Angle { get; set; }
 }
