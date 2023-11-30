@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalculator", "TriangleCalculator\TriangleCalculator.csproj", "{612273B6-2511-4F4C-AB11-5B5DBD155B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleCalculatorTests", "TriangleCalculatorTests\TriangleCalculatorTests.csproj", "{0933351F-7B2C-43B0-95B4-647BFEABC565}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{612273B6-2511-4F4C-AB11-5B5DBD155B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612273B6-2511-4F4C-AB11-5B5DBD155B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612273B6-2511-4F4C-AB11-5B5DBD155B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612273B6-2511-4F4C-AB11-5B5DBD155B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0933351F-7B2C-43B0-95B4-647BFEABC565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0933351F-7B2C-43B0-95B4-647BFEABC565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0933351F-7B2C-43B0-95B4-647BFEABC565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0933351F-7B2C-43B0-95B4-647BFEABC565}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
