@@ -2,9 +2,9 @@
 
 /// <summary>
 /// Модель ответа.
-/// nullable bool на случай, если в дальнейшем понадобятся не все поля (напрмер, вычисление поля потенциально тяжелое)
+/// nullable enum на случай, если треугольник невалидный)
 /// </summary>
-public class TrianglesCalculations
+public record TrianglesCalculations
 {
-    public AngleType Angle { get; set; }
+    public AngleType? Angle { get; set; }
 }
